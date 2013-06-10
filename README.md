@@ -1,4 +1,5 @@
-### This is a rails app. ![Rails Logo](https://raw.github.com/mxstrand/mxspro/master/app/assets/images/Rails.png "Rails Logo")
+### This is a rails app.
+![Rails Logo](https://raw.github.com/mxstrand/mxspro/master/app/assets/images/rails.png "Rails Logo")
 ------
 
 As per the Gemfile, the more interesting gems involved are:
