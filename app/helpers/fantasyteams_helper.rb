@@ -1,0 +1,2 @@
+module FantasyteamsHelper
+end

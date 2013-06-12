@@ -1,4 +1,7 @@
 Mxspro::Application.routes.draw do
+  resources :fantasyteams
+
+
   resources :players
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}

@@ -1,0 +1,14 @@
+$('#new_fantasyteam').remove();
+$('#new_link').show();
+<% if @fantasyteam.feepaid %>
+  $('#paid_teams').append('<%= j render(@fantasyteam) %>');
+<% else  %>
+  $('#unpaid_teams').append('<%= j render(@fantasyteam) %>');
+<% end %>
+
+/*
+This file uses embedded Ruby to decide which list to post the new team to.
+'#paid_teams' and '#unpaid_teams' refer to <div id's> on index.html.
+This feature was based on the following Railscast.
+http://railscasts.com/episodes/136-jquery-ajax-revised?view=asciicast
+ */

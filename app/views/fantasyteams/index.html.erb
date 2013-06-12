@@ -1,0 +1,13 @@
+<h1>Fantasy Teams</h1>
+
+<%= link_to "New Fantasy Team", new_fantasyteam_path, id: "new_link", remote: true, :class => 'btn btn-primary' %>
+
+<h2>Teams that paid their fee</h2>
+  <div class="fantasyteams" id="paid_teams">
+  <%= render @paid_teams %>
+  </div>
+
+<h2>Teams that need to pay fee</h2>
+  <div class="fantasyteams" id="unpaid_teams">
+  <%= render @unpaid_teams %>
+  </div>

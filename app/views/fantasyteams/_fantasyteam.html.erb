@@ -1,0 +1,24 @@
+<%= form_for fantasyteam, remote: true, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :teamname, "Team Name", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :teamname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :owner, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :owner, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :feepaid, "Fee Paid?", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :feepaid, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit "Update", :class => 'btn btn-primary' %>
+    <%= link_to "Delete", fantasyteam, method: :delete, data: {confirm: "Are you sure?"}, remote: true, :class => 'btn btn-danger' %>
+  </div>
+<% end %>

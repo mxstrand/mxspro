@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  teamname: MyString
+  owner: MyString
+  feepaid: false
+
+two:
+  teamname: MyString
+  owner: MyString
+  feepaid: false

@@ -1,0 +1,6 @@
+<% if @fantasyteam.feepaid %>
+  $('#edit_fantasyteam_<%= @fantasyteam.id %>').appendTo('#paid_teams');
+<% else %>
+  $('#edit_fantasyteam_<%= @fantasyteam.id %>').appendTo('#unpaid_teams');
+<% end %>
+

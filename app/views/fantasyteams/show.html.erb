@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Teamname:</b>
+  <%= @fantasyteam.teamname %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @fantasyteam.owner %>
+</p>
+
+<p>
+  <b>Feepaid:</b>
+  <%= @fantasyteam.feepaid %>
+</p>
+
+
+<%= link_to 'Edit', edit_fantasyteam_path(@fantasyteam) %> |
+<%= link_to 'Back', fantasyteams_path %>
