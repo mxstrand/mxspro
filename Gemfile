@@ -6,7 +6,13 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'httparty'
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'brakeman', :require => false
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,6 +33,13 @@ gem 'jquery-rails'
 
 gem 'devise' #used for user authentication, includes the user model
 gem 'omniauth-twitter' #used for twitter-based authentication
+
+group :test, :development do
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-debugger'
+  gem 'ruby-prof'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

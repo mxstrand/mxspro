@@ -1,12 +1,11 @@
 Mxspro::Application.routes.draw do
+  resources :features
   resources :fantasyteams
-
-
-  resources :players
+  resources :athletes
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  root :to => "players#index"
+  root :to => "features#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -14,5 +14,5 @@
 /log/*.log
 /tmp
 
-# Ignore doc library as that's where I track open work items
-/doc
+# Ignore ENV config values
+/config/application.yml
