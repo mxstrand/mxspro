@@ -8,7 +8,13 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'httparty'
 
+group :production do
+  gem 'pg' #production database format compatible with Heroku (SQLite is not)
+  gem 'unicorn' #production web server to allow multiple simultaneous processes
+end
+
 group :development do
+  gem 'thin' #local web server, faster than Webrick
   gem "better_errors"
   gem "binding_of_caller"
   gem 'brakeman', :require => false
