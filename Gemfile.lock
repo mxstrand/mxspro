@@ -75,6 +75,9 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastercsv (1.5.5)
+    figaro (0.6.4)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     haml (4.0.3)
       tilt
     hashie (2.0.5)
@@ -217,6 +220,7 @@ DEPENDENCIES
   brakeman
   coffee-rails (~> 3.2.1)
   devise
+  figaro
   httparty
   jquery-rails
   less-rails

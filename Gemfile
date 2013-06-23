@@ -10,6 +10,7 @@ gem 'httparty'
 gem 'jquery-rails'
 gem 'devise' #used for user authentication, includes the user model
 gem 'omniauth-twitter' #used for twitter-based authentication
+gem "figaro" #used for managing ENV variables across multiple environments
 
 group :production do
   gem 'pg' #production database format compatible with Heroku (SQLite is not)
