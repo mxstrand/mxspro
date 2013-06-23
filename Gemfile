@@ -2,10 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'httparty'
+gem 'jquery-rails'
+gem 'devise' #used for user authentication, includes the user model
+gem 'omniauth-twitter' #used for twitter-based authentication
 
 group :production do
   gem 'pg' #production database format compatible with Heroku (SQLite is not)
@@ -34,11 +38,6 @@ group :assets do
   gem "therubyracer" #required for bootstrap.
   gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 end
-
-gem 'jquery-rails'
-
-gem 'devise' #used for user authentication, includes the user model
-gem 'omniauth-twitter' #used for twitter-based authentication
 
 group :test, :development do
   gem 'pry-rails'
