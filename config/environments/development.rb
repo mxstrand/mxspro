@@ -1,3 +1,6 @@
+# here we pull in the ENV variables from the /config/applcation.yml file
+ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+
 Mxspro::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 

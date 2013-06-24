@@ -9,8 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# here we pull in the ENV variables from the /config/applcation.yml file
-ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 
 module Mxspro
   class Application < Rails::Application
