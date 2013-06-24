@@ -24,8 +24,8 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 Honorable mention to the following open source playas who helped me along the way:
 
-https://github.com/eeelmer
-https://github.com/ivanoats
-https://github.com/lostincode
-https://github.com/Codingrecipes
-https://github.com/johnbeynon
+* https://github.com/eeelmer
+* https://github.com/ivanoats
+* https://github.com/lostincode
+* https://github.com/Codingrecipes
+* https://github.com/johnbeynon
