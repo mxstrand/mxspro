@@ -3,7 +3,7 @@ class CreateFantasyteams < ActiveRecord::Migration
     create_table :fantasyteams do |t|
       t.string :teamname
       t.string :owner
-      t.boolean :feepaid
+      t.boolean :feepaid, :default => false
 
       t.timestamps
     end
