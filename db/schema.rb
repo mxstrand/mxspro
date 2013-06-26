@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618230837) do
+ActiveRecord::Schema.define(:version => 20130625222801) do
 
-  create_table "athletes", :force => true do |t|
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "displayname"
-    t.integer  "espnathleteid"
-    t.string   "athletenews"
-    t.string   "athleteprofile"
+  create_table "Athletes", :force => true do |t|
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "player_name"
+    t.integer  "nfldataid"
+    t.string   "position"
+    t.integer  "age"
+    t.string   "team"
   end
 
   create_table "fantasyteams", :force => true do |t|
@@ -41,8 +42,9 @@ ActiveRecord::Schema.define(:version => 20130618230837) do
     t.string   "name"
     t.string   "position"
     t.integer  "team_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "fantasyteamid"
   end
 
   create_table "users", :force => true do |t|

@@ -30,11 +30,19 @@
                   <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), :class => 'btn btn-small' %>
                 <% end %>
                 </nav>
-            <ul class="nav">
-              <li><%= link_to "Menu1" %></li>
-              <li><%= link_to "Menu2" %></li>
-              <li><%= link_to "Menu3" %></li>
-              <li><%= link_to "Menu4" %></li>
+            <ul class="nav" role="navigation">
+              <li class="dropdown">
+                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Athletes<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                  <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="<%= athletes_path %>">All Athletes</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Quarterbacks</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Running Backs</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wide Receivers</a></li>
+                </ul>
+              <li><%= link_to "Fantasy Teams", fantasyteams_path %></li>
+              <li><%= link_to "Draft!" %></li>
+              <li><%= link_to "Features", features_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
