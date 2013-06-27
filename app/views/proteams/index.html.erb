@@ -1,0 +1,24 @@
+<h1>Defensive Teams</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Team Name</th>
+    <th>Fumbles Forced</th>
+    <th>Opponent Offensive Yds/Play</th>
+    <th>Opponent Points Scored</th>
+    <th>Opponent Touchdowns</th>
+  </tr>
+
+<% @proteams.each do |proteam| %>
+  <tr>
+    <td><%= proteam.teamname %></td>
+    <td><%= proteam.opponentfumblesforced %></td>
+    <td><%= proteam.opponentoffensiveyardsperplay %></td>
+    <td><%= proteam.opponentscore %></td>
+    <td><%= proteam.opponenttouchdowns %></td>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />

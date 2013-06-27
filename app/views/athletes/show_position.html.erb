@@ -1,0 +1,29 @@
+<%- model_class = Athlete -%>
+<div class="page-header">
+  <h1>All <%= @position %>s</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Age</th>
+      <th>Team</th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @athletes.each do |athlete| %>
+      <tr>
+        <td><%= athlete.player_name %></td>
+        <td><%= athlete.position %></td>
+        <td><%= athlete.age %></td>
+        <td><%= athlete.team %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_athlete_path(athlete), :class => 'btn btn-mini' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,2 @@
+module ProteamsHelper
+end

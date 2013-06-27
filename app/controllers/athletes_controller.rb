@@ -1,10 +1,8 @@
 class AthletesController < ApplicationController
 
   def index
-    @athletes = Athlete.get_all_player_data_and_populate_db
     @athletes = Athlete.all
   end
-
 
   def show
     @athlete = Athlete.find(params[:id])
@@ -18,7 +16,6 @@ class AthletesController < ApplicationController
   def edit
     @athlete = Athlete.find(params[:id])
   end
-
 
   def create
     @athlete = Athlete.new(params[:athlete])
@@ -46,5 +43,10 @@ class AthletesController < ApplicationController
         format.json { render json: @athlete.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show_position
+    @position = params[:position].upcase
+    @athletes = Athlete.where("position = ?", @position)
   end
 end

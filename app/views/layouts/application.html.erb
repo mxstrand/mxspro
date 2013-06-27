@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/">mxspro <i class="icon-star icon-white"></i></a>
+          <a class="brand" href="/">SkyboxSports <i class="icon-star icon-white"></i></a>
           <div class="nav-collapse collapse">
                 <nav class="pull-right">
                   <% if user_signed_in? %>
@@ -36,9 +36,11 @@
                 <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                   <li role="presentation">
                     <a role="menuitem" tabindex="-1" href="<%= athletes_path %>">All Athletes</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Quarterbacks</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Running Backs</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wide Receivers</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/athletes/position/QB">Quarterbacks</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/athletes/position/RB">Running Backs</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/athletes/position/WR">Wide Receivers</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/athletes/position/K">Kickers</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= proteams_path %>">Defense</a></li>
                 </ul>
               <li><%= link_to "Fantasy Teams", fantasyteams_path %></li>
               <li><%= link_to "Draft!" %></li>
@@ -48,25 +50,21 @@
         </div>
       </div>
     </div>
+
     <div class="container">
-      <% [:notice, :error, :alert].each do |level| %>
-        <% unless flash[level].blank? %>
-          <div class="alert alert-<%= flash_class(level) %>">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <%= flash[level] %>
-          </div>
-        <% end %>
-      <% end %>
-      <div class="container">
-        <div class="row">
-          <div class="span9"><%= yield %></div>
-          <div class="span3">
-            <h2>About Us</h2>
-            <p>We love sports.</p>
-          </div>
+    <% [:notice, :error, :alert].each do |level| %>
+      <% unless flash[level].blank? %>
+        <div class="alert alert-<%= flash_class(level) %>">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[level] %>
         </div>
-      </div>
+      <% end %>
+    <% end %>
+    <br />
+    <%= yield %>
+    <%= yield :javascript %>
     </div>
+
     <footer class="footer">
       <div class="container">
         <p>Crafted with love by <a href="https://twitter.com/mxstrand" target="_blank">@mxstrand</a>. Fork me at <a href="https://github.com/mxstrand" target="_blank">github</a>.</p>
