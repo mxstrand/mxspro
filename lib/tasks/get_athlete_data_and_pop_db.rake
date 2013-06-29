@@ -10,5 +10,10 @@ namespace :getNFLdata do
 
 end
 
+# DEVELOPMENT
 # rake getNFLdata:players
 # rake getNFLdata:teams
+
+# PRODUCTION
+# heroku run rake getNFLdata:players
+# heroku run rake getNFLdata:teams

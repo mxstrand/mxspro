@@ -1,0 +1,7 @@
+<% form_for :athletes do |f| %>
+  <div class="field">
+      <%= f.label :position, "Position" %>
+      <%= f.collection_select(:position, Athlete.unique_by_position, :position, :position) %>
+  </div>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

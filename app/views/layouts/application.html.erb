@@ -42,9 +42,21 @@
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="/athletes/position/K">Kickers</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= proteams_path %>">Defense</a></li>
                 </ul>
-              <li><%= link_to "Fantasy Teams", fantasyteams_path %></li>
-              <li><%= link_to "Draft!" %></li>
+              <li class="dropdown">
+                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Fantasy Teams<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                  <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="<%= new_fantasyteam_path %>">Add New Team</a></li>
+                  <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="<%= fantasyteams_path %>">All Fantasy Teams</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/1">Team 1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/2">Team 2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/3">Team 3</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/4">Team 4</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/4">Team 5</a></li>
+                </ul>
               <li><%= link_to "Features", features_path %></li>
+              <li><%= link_to "About Us", "/welcome/aboutus" %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

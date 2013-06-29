@@ -49,4 +49,11 @@ class AthletesController < ApplicationController
     @position = params[:position].upcase
     @athletes = Athlete.where("position = ?", @position)
   end
+
+  def draft_me
+    @athlete = Athlete.find(params[:id])
+    @athlete.fantasyteamid = params[:fantasyteamid]
+    @athlete.save
+    redirect_to "/fantasyteams/#{params[:fantasyteamid]}"
+  end
 end

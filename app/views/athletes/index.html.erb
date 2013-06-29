@@ -8,7 +8,8 @@
       <th>Name</th>
       <th>Position</th>
       <th>Age</th>
-      <th>Team</th>
+      <th>Pro Team</th>
+      <th>Fantasy Team</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
         <td><%= athlete.position %></td>
         <td><%= athlete.age %></td>
         <td><%= athlete.team %></td>
+        <td><%= athlete.fantasyteamid %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_athlete_path(athlete), :class => 'btn btn-mini' %>

@@ -8,11 +8,19 @@ class FantasyteamsController < ApplicationController
     @fantasyteam = Fantasyteam.new
   end
 
+  def show
+    @fantasyteam = Fantasyteam.find(params[:id])
+    @athletes = Athlete.where("fantasyteamid = ?", @fantasyteam)
+
+    @draftable_athletes = Athlete.where(:fantasyteamid => nil )
+  end
+
   def create
     @fantasyteam = Fantasyteam.create!(params[:fantasyteam])
     respond_to do |format|
       format.html { redirect_to fantasyteams_url }
       format.js
+    redirect_to fantasyteams_path and return
       # the format.js file in this instance is views/fantasyteams/create.js.erb
     end
   end

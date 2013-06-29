@@ -1,5 +1,7 @@
 class Athlete < ActiveRecord::Base
   attr_accessible :nfldataid, :player_name, :age, :position, :team
+  belongs_to :fantasyteams
+  scope :unique_by_position, lambda { select('DISTINCT(position)') }
 
   include HTTParty
   base_uri 'http://api.nfldata.apiphany.com/trial/JSON'

@@ -1,20 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h3>
   <b>Teamname:</b>
-  <%= @fantasyteam.teamname %>
-</p>
-
-<p>
+  <%= @fantasyteam.teamname %><br>
   <b>Owner:</b>
-  <%= @fantasyteam.owner %>
-</p>
-
-<p>
+  <%= @fantasyteam.owner %><br>
   <b>Feepaid:</b>
   <%= @fantasyteam.feepaid %>
-</p>
+</h3>
 
+<hr>
+
+<div class="container">
+  <div class="span5">
+    <table class="table table-striped">
+      <thead>
+        <h1>On your team</h1>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Age</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @athletes.each do |athlete| %>
+          <tr>
+            <td><%= athlete.player_name %></td>
+            <td><%= athlete.position %></td>
+            <td><%= athlete.age %></td>
+            <td><%= athlete.team %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="span5">
+      <table class="table table-striped">
+        <thead>
+          <h1>Draftable</h1>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Age</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @draftable_athletes.each do |draft_athlete| %>
+            <tr>
+              <td><%= draft_athlete.player_name %></td>
+              <td><%= draft_athlete.position %></td>
+              <td><%= draft_athlete.age %></td>
+              <td><%= draft_athlete.team %></td>
+              <td><%= link_to 'Draft Me', draft_me_path(draft_athlete.id, @fantasyteam.id) , :class => 'btn btn-mini'%></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_fantasyteam_path(@fantasyteam) %> |
 <%= link_to 'Back', fantasyteams_path %>
