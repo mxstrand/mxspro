@@ -1,4 +1,6 @@
 Mxspro::Application.routes.draw do
+  resources :leagues
+
   resources :proteams
   resources :drafts
   resources :features

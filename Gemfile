@@ -42,6 +42,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'railroady' #visualization of schema.rb
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'

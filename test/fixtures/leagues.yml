@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  team_count: 1
+  name: MyString
+  player_count: 1
+  draft_timer_seconds: 1
+  commissioner_id: 1
+
+two:
+  team_count: 1
+  name: MyString
+  player_count: 1
+  draft_timer_seconds: 1
+  commissioner_id: 1

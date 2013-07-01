@@ -1,6 +1,8 @@
 class Proteam < ActiveRecord::Base
   attr_accessible :teamseasonid, :teamname, :opponentfumblesforced, :opponentoffensiveyardsperplay, :opponentscore, :opponenttouchdowns
 
+  has_one :fantasyteam
+
   include HTTParty
   base_uri 'http://api.nfldata.apiphany.com/trial/JSON'
 
