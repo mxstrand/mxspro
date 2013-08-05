@@ -1,8 +1,6 @@
 <%= form_for @fantasyteam do |f| %>
   <%= f.label :teamname, "Team Name  " %>
   <%= f.text_field :teamname %>
-  <%= f.label :owner, "Owner  " %>
-  <%= f.text_field :owner %>
   <%= f.label :feepaid, "Fee Paid?  " %>
   <%= f.check_box :feepaid %><br />
   <%= f.submit "Create" %>

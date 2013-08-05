@@ -49,11 +49,12 @@
                     <a role="menuitem" tabindex="-1" href="<%= new_fantasyteam_path %>">Add New Team</a></li>
                   <li role="presentation">
                     <a role="menuitem" tabindex="-1" href="<%= fantasyteams_path %>">All Fantasy Teams</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/1">Team 1</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/2">Team 2</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/3">Team 3</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/4">Team 4</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/4">Team 5</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/<%= @fteamid[0] %>"><%= @fteams[0] %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/<%= @fteamid[1] %>"><%= @fteams[1] %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/<%= @fteamid[2] %>"><%= @fteams[2] %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/<%= @fteamid[3] %>"><%= @fteams[3] %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/<%= @fteamid[4] %>"><%= @fteams[4] %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/fantasyteams/<%= @fteamid[5] %>"><%= @fteams[5] %></a></li>
                 </ul>
               <li><%= link_to "Features", features_path %></li>
               <li><%= link_to "About Us", "/welcome/aboutus" %></li>

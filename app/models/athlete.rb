@@ -11,6 +11,7 @@ class Athlete < ActiveRecord::Base
              'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC',
              'MIA', 'MIN', 'NE']
     teams.each do |team|
+      puts "Getting #{team} player data..."
 
       response = Athlete.get("/Players/#{team}",
         :query => { :key => ENV["NFL_DATA_KEY"] })

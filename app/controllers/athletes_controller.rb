@@ -56,4 +56,5 @@ class AthletesController < ApplicationController
     @athlete.save
     redirect_to "/fantasyteams/#{params[:fantasyteamid]}"
   end
+
 end

@@ -8,11 +8,13 @@ class FantasyteamsController < ApplicationController
     @fantasyteam = Fantasyteam.new
   end
 
+  helper_method :sort_column, :sort_direction
   def show
     @fantasyteam = Fantasyteam.find(params[:id])
     @athletes = Athlete.where("fantasyteamid = ?", @fantasyteam)
 
     @draftable_athletes = Athlete.where(:fantasyteamid => nil )
+    @draftable_athletes = Athlete.order(sort_column + ' ' + sort_direction)
   end
 
   def create
@@ -43,4 +45,15 @@ class FantasyteamsController < ApplicationController
       # the format.js file in this instance is views/fantasyteams/destroy.js.erb
     end
   end
+
+private
+  def sort_column
+    params[:sort] || "player_name"
+  end
+
+  def sort_direction
+    params[:direction] || "asc"
+  end
+
 end
+

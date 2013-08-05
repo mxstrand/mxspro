@@ -6,8 +6,6 @@ class Proteam < ActiveRecord::Base
   include HTTParty
   base_uri 'http://api.nfldata.apiphany.com/trial/JSON'
 
-
-
   def self.get_team_data_and_pop_db
     response = Proteam.get('/TeamSeasonStats/2012',
       :query => { :key => ENV["NFL_DATA_KEY"] })
